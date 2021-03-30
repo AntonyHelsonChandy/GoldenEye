@@ -19,6 +19,10 @@ public class GenericProfileAxonRequest {
     private Map<String,String> payload;
     private Metadata metadata;
 
+    @Override
+    public String toString(){
+        return "GenericProfileAxonRequest{"+"keys="+this.keys+",payload="+this.payload+",metadata="+this.metadata+"}";
+    }
 
 
 
