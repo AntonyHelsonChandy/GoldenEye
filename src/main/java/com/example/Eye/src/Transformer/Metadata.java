@@ -1,3 +1,5 @@
+package com.example.Eye.src.Transformer;
+
 import lombok.*;
 import org.apache.avro.reflect.AvroDefault;
 
@@ -16,7 +18,7 @@ public class Metadata {
 
     @Override
     public String toString(){
-        return "Metadata{"+"profile="+this.profile+",action="+this.action+"}";
+        return "com.example.Eye.src.Transformer.Metadata{"+"profile="+this.profile+",action="+this.action+"}";
     }
 
 

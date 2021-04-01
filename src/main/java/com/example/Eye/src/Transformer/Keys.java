@@ -1,3 +1,5 @@
+package com.example.Eye.src.Transformer;
+
 import lombok.*;
 import org.springframework.lang.Nullable;
 
@@ -29,9 +31,11 @@ private String pan;
     private String tur;
 @Nullable
     private String replacemntPan;
+
+
 @Override
 public String toString(){
-    return "Keys{"+"pan="+this.pan+",token="+this.token+",token="+",uuid="+this.uuid+",tur="+this.tur+"replacemntPan"+this.replacemntPan+"}";
+    return "com.example.Eye.src.Transformer.Keys{"+"pan="+this.pan+",token="+this.token+",token="+",uuid="+this.uuid+",tur="+this.tur+"replacemntPan"+this.replacemntPan+"}";
 }
 
 

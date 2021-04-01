@@ -1,3 +1,5 @@
+package com.example.Eye.src.Transformer;
+
 import lombok.*;
 
 import java.util.Map;
@@ -21,7 +23,7 @@ public class GenericProfileAxonRequest {
 
     @Override
     public String toString(){
-        return "GenericProfileAxonRequest{"+"keys="+this.keys+",payload="+this.payload+",metadata="+this.metadata+"}";
+        return "com.example.Eye.src.Transformer.GenericProfileAxonRequest{"+"keys="+this.keys+",payload="+this.payload+",metadata="+this.metadata+"}";
     }
 
 
