@@ -2,18 +2,60 @@ package com.example.Eye.src.Transformer;
 
 import com.example.Eye.Model.GenericGridProfileRequest;
 import com.example.Eye.Model.GridProfileRequestMap;
+import com.example.Eye.Model.PPRequest;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import org.apache.commons.lang3.StringUtils;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class GridRequestTransformer {
+
+    private static final Logger LOGGER = LogManager.getLogger(GridRequestTransformer.class);
+
+
     private JsonTransformer jsonTransformer;
-    public GridProfileRequestMap transform(){
+    public GridProfileRequestMap transform(final List<GenericProfileAxonRequest> genericProfileAxonRequests){
+        GenericProfileAxonRequest genericProfileAxonRequest = genericProfileAxonRequests.get(0);
+
+        final Set<PPRequest> ppCategoryRequestSet = Sets.newLinkedHashSet();
+        final Set<List<PPRequest>> ppMultiStepRequestSet = Sets.newLinkedHashSet();
+        final List<PPRequest> ppMultiStepRequests = Lists.newArrayList();
+        final Map<Integer, GenericProfileAxonRequest> originalRequestMap = Maps.newHashMap();
+
+        try {
+            final GenericGridProfileRequest genericGridProfileRequest = this.buildGenericGridProfileRequest(genericProfileAxonRequest);
+           // final RequestType requestType = genericGridProfileRequest.getRequestType();
+            final RequestType requestType = null;
+            final Map<String, Object> categoryMap = genericGridProfileRequest.getCategoryMap();
+            if (RequestType.UPDATE.equals(requestType) || RequestType.DELETE.equals(requestType))
+            {
+                
+            }
 
 
-return new GridProfileRequestMap();
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        return new GridProfileRequestMap();
+
+
+
+
+
+
+
+
+
+
     }
 
 

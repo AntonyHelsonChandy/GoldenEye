@@ -1,6 +1,8 @@
 package com.example.Eye.src.Transformer;
-import java.util.HashMap;import java.util.Map;
-public enum KeyConstants { PAN_INDEX((byte) 1, true), PAR_INDEX((byte) -1, false), UUID_INDEX((byte) -2, false);
+import java.util.HashMap;
+import java.util.Map;
+public enum KeyConstants {
+ PAN_INDEX((byte) 1, true), PAR_INDEX((byte) -1, false), UUID_INDEX((byte) -2, false);
  private byte index; private boolean sensitive;
  private static Map<Byte, KeyConstants> indices = new HashMap<>();
  static { for (KeyConstants constant : KeyConstants.values()) { indices.put(constant.index, constant); } }
